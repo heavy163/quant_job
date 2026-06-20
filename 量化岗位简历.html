@@ -43,7 +43,6 @@
     font-weight: bold;
     margin-top: 2pt;
   }
-
   h2 {
     font-size: 11pt;
     color: #1a237e;
@@ -65,7 +64,7 @@
   .job-title {
     font-weight: bold;
     font-size: 9.5pt;
-    margin: 6pt 0 1pt 0;
+    margin: 7pt 0 1pt 0;
   }
   .job-meta {
     font-size: 8.5pt;
@@ -80,8 +79,6 @@
     margin-bottom: 1pt;
     list-style-type: disc;
   }
-
-  /* Metrics table */
   .metrics {
     width: 100%;
     border-collapse: collapse;
@@ -91,12 +88,12 @@
     padding: 3pt 6pt;
     border: 1px solid #ddd;
     text-align: center;
-    width: 20%;
+    width: 16%;
   }
   .metrics td:first-child {
     background: #f5f5f5;
     font-weight: bold;
-    width: 16%;
+    width: 14%;
     text-align: left;
   }
   .metrics td.val {
@@ -104,8 +101,6 @@
     color: #c62828;
     font-size: 10pt;
   }
-
-  /* Skills table */
   .skills {
     width: 100%;
     border-collapse: collapse;
@@ -123,20 +118,6 @@
     width: 18%;
     white-space: nowrap;
   }
-
-  .highlight {
-    color: #c62828;
-    font-weight: bold;
-  }
-  .tag {
-    display: inline-block;
-    background: #e8eaf6;
-    color: #283593;
-    padding: 0 5pt;
-    border-radius: 2pt;
-    font-size: 8pt;
-    margin-right: 2pt;
-  }
   .note {
     background: #fff8e1;
     border-left: 3px solid #ffa000;
@@ -153,6 +134,7 @@
     padding-top: 4pt;
   }
   .page-break { page-break-before: always; }
+  strong { color: #1a237e; }
 </style>
 </head>
 <body>
@@ -165,10 +147,9 @@
     <span>📍 深圳</span>
     <span>🔗 github.com/heavy-james</span>
   </div>
-  <div class="tagline">13年软件工程经验 · 期货实盘策略（年化100%+，最大回撤10%） · 求职意向：量化策略开发工程师 / 量化系统开发工程师 · 薪资期望：35-50K</div>
+  <div class="tagline">13年软件工程经验 · 期货实盘策略（年化100%+，最大回撤10%） · 薪资期望：35-50K</div>
 </div>
 
-<!-- ============ 量化策略成果 ============ -->
 <h2>量化策略成果</h2>
 
 <h3>期货合约实盘策略 — 个人自营</h3>
@@ -176,34 +157,27 @@
 
 <table class="metrics">
   <tr>
-    <td>年化收益率</td>
-    <td class="val">100+%</td>
-    <td>最大回撤</td>
-    <td class="val">10%</td>
-    <td>运行方式</td>
-    <td>全自动交易</td>
+    <td>年化收益率</td><td class="val">100+%</td>
+    <td>最大回撤</td><td class="val">10%</td>
+    <td>运行方式</td><td>全自动交易</td>
   </tr>
   <tr>
-    <td>夏普比率</td>
-    <td class="val">4.8</td>
-    <td>胜率</td>
-    <td class="val">56.8%</td>
-    <td>策略类型</td>
-    <td>多因子合成</td>
+    <td>夏普比率</td><td class="val">4.8</td>
+    <td>胜率</td><td class="val">56.8%</td>
+    <td>策略类型</td><td>多因子合成</td>
   </tr>
 </table>
 
 <p><strong>技术实现：</strong></p>
 <ul>
-  <li>使用 Python + pandas/polars 构建因子计算管线，覆盖量价、波动率、流动性等 100+ 因子</li>
-  <li>基于 LightGBM 构建多因子合成模型，通过滚动时间序列交叉验证防止过拟合</li>
-  <li>基于 backtrader 二次开发回测引擎，支持自定义滑点模型、交易成本、资金管理</li>
+  <li>使用 Python + pandas/polars 构建因子计算管线，覆盖量价、波动率、流动性等 <strong>100+</strong> 因子</li>
+  <li>基于 <strong>LightGBM</strong> 构建多因子合成模型，通过滚动时间序列交叉验证防止过拟合</li>
+  <li>基于 <strong>backtrader</strong> 二次开发回测引擎，支持自定义滑点模型、交易成本、资金管理</li>
   <li>设计并实现交易风控模块：仓位限制、止损线、回撤熔断、异常交易监控</li>
 </ul>
 
 <div class="note">📌 实盘可验证。</div>
 
-<!-- ============ 技术能力 ============ -->
 <h2>技术能力</h2>
 
 <h3>量化与数据科学</h3>
@@ -224,7 +198,6 @@
   <tr><td>协议/通信</td><td>TCP/UDP、串口通信、MQTT</td></tr>
 </table>
 
-<!-- ============ 核心工作经验 ============ -->
 <h2>核心工作经验</h2>
 
 <div class="job-title">量化策略研究与系统开发</div>
@@ -241,38 +214,38 @@
 <p><strong>传感器自动化标定与测试平台（核心量化相关项目）</strong></p>
 <ul>
   <li><strong>技术栈：</strong> Python + QT/C++ + SQLite</li>
-  <li>为油液传感器研制一套集数据采集、清洗、存储、参数计算、标定、精度回测于一体的自动化平台</li>
-  <li><strong>量化层面：</strong>大量运用数据拟合、回归分析、异常检测方法处理传感器原始数据，建立光强-浓度关系模型（类似于量化中的截面因子建模）</li>
-  <li><strong>成果：</strong>将传感器标定精度提升了60%，生产效率提升3倍，支撑首期千万级项目交付</li>
+  <li>为油液传感器研制集数据采集、清洗、存储、参数计算、标定、精度回测于一体的自动化平台</li>
+  <li><strong>量化层面：</strong> 大量运用数据拟合、回归分析、异常检测方法处理传感器原始数据，建立光强-浓度关系模型（类似于量化中的截面因子建模）</li>
+  <li><strong>成果：</strong> 标定精度提升60%，生产效率提升3倍，支撑首期千万级项目交付</li>
 </ul>
 
 <p><strong>光谱仪核心算法与软件架构</strong></p>
 <ul>
   <li>独立设计光谱测量核心算法：对几千组标准样品进行光谱数据采集，建立各金属元素的光强-浓度非线性拟合模型</li>
   <li>设计高内聚低耦合的软件架构，支撑复杂的数据处理管线（每帧测量需处理数百帧光谱数据）</li>
-  <li>数据处理涉及信号去噪、基线校正、峰识别、浓度反演等多个环节——和量化因子管线的逻辑高度相似</li>
+  <li>数据处理涉及信号去噪、基线校正、峰识别、浓度反演等环节——和量化因子管线的逻辑高度相似</li>
 </ul>
 
-<p><strong>离线检测设备软件架构重构</strong></p>
+<p><strong>离线检测设备 · 架构重构</strong></p>
 <ul>
-  <li>卡顿率从12%降至0.5%，并设计无侵入式卡顿监控框架</li>
+  <li>卡顿率从12%降至0.5%，设计无侵入式卡顿监控框架</li>
   <li>使用Python脚本进行运行数据分析与可视化</li>
 </ul>
 
-<p><strong>在线监测设备软件架构设计</strong></p>
+<p><strong>在线监测设备 · 软件架构设计</strong></p>
 <ul>
-  <li>采用分层模块化设计，实现组件和服务抽取、设备驱动层设计</li>
+  <li>分层模块化设计，实现组件和服务抽取、设备驱动层设计</li>
   <li>封装日志、配置、ORM等基础模块，形成可复用技术底座</li>
 </ul>
 
 <div class="job-title">深圳市欢太科技有限公司（OPPO）· 高级应用工程师</div>
 <div class="job-meta">2021.05 - 2022.06 | 深圳</div>
 <ul>
-  <li>负责游戏中心Android客户端主力开发与性能优化</li>
-  <li><strong>冷启动速度优化：</strong>使用systrace/traceview分析启动链路，优化后缩短38%（730ms → 450ms）</li>
-  <li><strong>编译速度优化：</strong>升级Gradle配置并修复缓存问题，无缓存编译缩短33%，有缓存编译缩短63%</li>
-  <li><strong>质量体系建设：</strong>主导自动化测试框架落地并接入CI/CD，补齐核心业务单元测试和UI自动化用例</li>
-  <li><strong>系统兼容：</strong>完成Android 11/12共30+项系统变更适配</li>
+  <li>游戏中心Android客户端主力开发与性能优化</li>
+  <li><strong>冷启动速度优化：</strong> 缩短38%（730ms → 450ms）</li>
+  <li><strong>编译速度优化：</strong> 无缓存编译缩短33%，有缓存编译缩短63%</li>
+  <li><strong>质量体系：</strong> 落地自动化测试框架并接入CI/CD</li>
+  <li><strong>系统兼容：</strong> 完成Android 11/12共30+项适配</li>
 </ul>
 
 <div class="page-break"></div>
@@ -280,16 +253,16 @@
 <div class="job-title">拓邦股份 · 应用组组长（管理11人团队）</div>
 <div class="job-meta">2017.07 - 2021.05 | 深圳</div>
 <ul>
-  <li>管理11人应用开发团队，涵盖研发、设计、测试等多种职能</li>
-  <li>主导智能跑步机、智能集成灶等多款IoT产品的全栈研发</li>
-  <li><strong>研发基础建设：</strong>独立搭建并部署禅道（项目管理）、Gerrit（代码审核）、SonarQube（代码质量）、Jenkins（持续集成）、Nexus（组件托管）五大系统，成为部门核心工作平台</li>
+  <li>管理11人团队，涵盖研发、设计、测试等多种职能</li>
+  <li>主导智能跑步机、智能集成灶等多款IoT产品全栈研发</li>
+  <li><strong>研发基础建设：</strong> 独立搭建禅道、Gerrit、SonarQube、Jenkins、Nexus五大系统</li>
 </ul>
 
 <div class="job-title">飞看科技 · 软件工程师（腾讯客厅产品部驻场）</div>
 <div class="job-meta">2015.07 - 2017.06 | 深圳</div>
 <ul>
-  <li>参与腾讯智能电视Android应用开发（腾讯视频TV版、设置向导等）</li>
-  <li>自主开发基于Gradle的UI自动化测试DSL（Kotlin DSL），被团队采纳</li>
+  <li>腾讯智能电视Android应用开发（腾讯视频TV版、设置向导等）</li>
+  <li>自主开发基于Gradle的UI自动化测试DSL（Kotlin DSL）</li>
 </ul>
 
 <div class="job-title">同洲电子 · 软件工程师（应届入职）</div>
@@ -298,29 +271,26 @@
   <li>负责开机向导、系统设置、网络升级等Android系统级应用开发</li>
 </ul>
 
-<!-- ============ 教育背景 ============ -->
 <h2>教育背景</h2>
 
 <div class="job-title">南昌大学（211院校） · 计算机科学与技术 · 本科</div>
 <div class="job-meta">2009.09 - 2013.06 | 英语六级</div>
 
-<!-- ============ 其他信息 ============ -->
 <h2>其他信息</h2>
 
 <table class="skills">
   <tr><td>GitHub</td><td>https://github.com/heavy-james</td></tr>
-  <tr><td>开源作品</td><td>AutoUML（Java字节码类图绘制Gradle插件）、AndroidTestPlugin（自动化测试DSL）、Android启动时序图</td></tr>
-  <tr><td>自我评价</td><td>13年全栈软件工程功底 + 量化策略实战经验。对数据有直觉，对代码有要求，对风险有敬畏。善于快速学习新领域，从Android跨界到传感器再到量化金融，每次跨界都有实质性产出。</td></tr>
+  <tr><td>开源作品</td><td>AutoUML（字节码类图Gradle插件）、AndroidTestPlugin（自动化测试DSL）、Android启动时序图</td></tr>
+  <tr><td>自我评价</td><td>13年全栈软件工程功底 + 量化策略实战经验。对数据有直觉，对代码有要求，对风险有敬畏。善于快速学习新领域，每次跨界都有实质性产出。</td></tr>
   <tr><td>兴趣爱好</td><td>阅读（技术/金融/心理）、写作、音乐（吉他/钢琴）、篮球</td></tr>
 </table>
 
-<!-- ============ 补充说明 ============ -->
 <h2>补充说明</h2>
 
 <div class="note">
-  <strong>关于学历：</strong>本科211计算机专业，13年一线工程经验覆盖从嵌入式到云端的全栈技术栈。量化行业重实盘结果，我对策略赚钱（以及亏钱）的原因有深刻理解。<br><br>
-  <strong>关于年龄：</strong>35岁，成熟的工程判断力和抗压能力。量化行业需要的是能稳定输出alpha的策略开发，而不是年少冲动的赌徒。<br><br>
-  <strong>关于转型：</strong>我有完整的从数据到实盘的量化技术栈开发经验，不需要培训就能直接上手搭建回测系统、数据管线、交易引擎。
+  <strong>关于学历：</strong> 本科211计算机专业，13年一线工程经验覆盖从嵌入式到云端的全栈技术栈。量化行业重实盘结果，我对策略赚钱（以及亏钱）的原因有深刻理解。<br><br>
+  <strong>关于年龄：</strong> 35岁，成熟的工程判断力和抗压能力。量化行业需要的是能稳定输出alpha的策略开发，而不是年少冲动的赌徒。<br><br>
+  <strong>关于转型：</strong> 我有完整的从数据到实盘的量化技术栈开发经验，不需要培训就能直接上手搭建回测系统、数据管线、交易引擎。
 </div>
 
 <div class="footer">
